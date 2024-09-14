@@ -9,8 +9,8 @@ def extractFile(zfile, password):
         return
     
 def main():
-    zfile = zipfile.ZipFile('D:/projects/zip-password-cracker/test.zip')
-    passFile = open('D:/projects/zip-password-cracker/passlist.txt')
+    zfile = zipfile.ZipFile('test.zip')
+    passFile = open('passlist.txt')
     for line in passFile.readlines():
         password = line.strip('\n')
         guess = extractFile(zfile, password)
